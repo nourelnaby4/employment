@@ -1,0 +1,48 @@
+﻿@model IEnumerable<MyProject.Models.ApplyForJob>
+
+@{
+    ViewBag.Title = "GetJobsByPublisher";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<h2>GetJobsByPublisher</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.job.JobTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.user.UserName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Message)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ApplyDate)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.job.JobTitle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.user.UserName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Message)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ApplyDate)
+        </td>
+        
+    </tr>
+}
+
+</table>

@@ -1,0 +1,32 @@
+﻿@model IEnumerable<MyProject.Models.Job>
+
+@{
+    ViewBag.Title = "Search";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<h2>Search</h2>
+
+
+    <div class="panel panel-default">
+     
+        <div class="row" style="margin-right:12px;">
+            @foreach (var item in Model)
+            {
+
+                <div class="col-md-3 thumbnail" style="margin-left: 30px;margin-bottom:20px;">
+                    <img src="~/Uploads/@Html.DisplayFor(m=>item.JobImage)" style="width:100%;height:200px;" />
+                    <h3>@Html.DisplayFor(m => item.JobTitle)</h3>
+                    <h5>@Html.DisplayFor(m => item.JobContent)</h5>
+
+
+                    @* <input type="button" class="btn btn-default" value="التفاصيل" style="background-color:cadetblue;" />*@
+                    @*id=(JobId=>the parameter in the controller details action *@
+                    @Html.ActionLink("التفاصيل", "Details", new { JobId = item.Id }, new { @class = "btn btn-primary" })
+
+                </div>
+
+            }
+        </div>
+    </div>
+}

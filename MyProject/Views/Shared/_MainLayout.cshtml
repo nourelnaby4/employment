@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width ,initial scala=1" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+
+
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/Style.css" rel="stylesheet" />
+    <!-- how to import the font in video 3 at 11min-->
+</head>
+<body>
+    <!--navbare-->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#navbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="#" class="navbar-brand">
+                    <img src="" />
+                </a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#">
+                            <i class="glyphicon glyphicon-home"></i>
+                            الرئيسية
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="#">
+                            <i class="glyphicon glyphicon-leaf"></i>
+                            حول الموقع
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="glyphicon glyphicon-send"></i>
+                            اتصل بنا
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="glyphicon glyphicon-search"></i>
+
+
+                            @using (Html.BeginForm("Search", "Home", FormMethod.Post))
+                            {
+                                <input type="text" name="SearchName" placeholder="ابحث هنا.." style="color:navy;
+                             background-color:aliceblue;width:180px;border-radius:6px;margin-bottom:30px" />
+                            }
+
+                        </a>
+                    </li>
+                </ul>
+                
+
+                <!--partial view(_Login.cshtml) -->
+                <!--(_Login) هو مسار الوصول الي الصفحة-->
+                @Html.Partial("_Login")
+
+            </div>
+
+        </div>
+    </nav>
+
+
+    <div class="container">
+        <div class="row">
+            @RenderBody()
+        </div>
+    </div>
+
+
+    <!--footer-->
+    <footer class="nav navbar-relative-bottom myfooter ">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>
+                        <i class="glyphicon glyphicon-question-sign"></i>
+                        من نحن
+                    </h3>
+                    <p>
+                        تستطيع من خلال هذا الموقع البحث عن الوظائف الخالية المناسبة لك ولخبراتك في جميع أنحاء العالم، ويمكنك التواصل ايضاً مع الأشخاص في نفس مجالك والاستفادة من بعضكم البعض .
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <h3>
+                        <i class="glyphicon glyphicon-globe"></i>
+                        روابط هامة
+                    </h3>
+                    <ul>
+                        <li>
+                            <a href="#">وظائف للقطاع العام</a>
+                        </li>
+                        <li>
+                            <a href="#">وظائف للقطاع الخاص</a>
+                        </li>
+                        <li>
+                            <a href="#">وظائف خارج البلاد</a>
+                        </li>
+                        <li>  <a href="#">وظائف متنوعة</a></li>
+
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h3>
+                        <i class="glyphicon glyphicon-envelope"></i>
+                        تواصل معنا
+                    </h3>
+                    <ul>
+                        <li>
+                            <a href="#">صفحتنا على الفيس بوك</a>
+                        </li>
+                        <li>
+                            <a href="#">تابعنا على تويتر</a>
+                        </li>
+                        <li> <a href="#">شاهدنا علي اليوتيوب</a></li>
+                        <li><a href="#">اترك لنا رسالة</a></li>
+
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="subfooter">
+            <p>
+                جميع الحقوق محفوظة لموقع التوظيف لعام -2020
+            </p>
+        </div>
+    </footer>
+
+    <!-- jquery is first-->
+    <script src="~/Script/jquery-3.5.1.js"></script>
+    <script src="~/Script/bootstrap.min.js"></script>
+    @*  @RenderSection("scripts",required:false)*@
+</body>
+</html>

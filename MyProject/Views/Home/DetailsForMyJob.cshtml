@@ -1,0 +1,44 @@
+﻿@model MyProject.Models.ApplyForJob
+
+@{
+    ViewBag.Title = "DetailsForMyJob";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<h2>DetailsForMyJob</h2>
+
+<div>
+    <h4>ApplyForJob</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.job.JobTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.job.JobTitle)
+        </dd>
+
+    
+        <dt>
+            رسالتك
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Message)
+        </dd>
+
+        <dt>
+            التاريخ
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ApplyDate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

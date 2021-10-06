@@ -1,0 +1,61 @@
+﻿@font-face {
+    font-family: myFont2;
+    src: url('font/Droidkufi-Regular.ttf')
+}
+
+@font-face {
+    font-family: myFont;
+    src: url('font/GE_ss_Two_Bold.otf')
+}
+body {
+    padding-top: 100px;
+   
+}
+.navbar-default {
+    background-color: #0c5c82;
+    border-color: #e7e7e7;
+}
+
+    .navbar-default .navbar-nav > li > a:hover {
+        color: #fff;
+    }
+
+    .navbar-default .navbar-nav > li > a {
+        color: #e7e7e7;
+        font-family: myfont;
+    }
+
+.nav > li {
+    position: relative;
+    display: block;
+    height: 75px;
+    padding-top: 10px;
+}
+
+.myfooter text {
+    background-color: cornflowerblue;
+    padding-top: 5px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 12px;
+    text-align: justify;
+   
+}
+
+.subfooter {
+    background-color: royalblue;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 11px;
+}
+
+.myfooter a {
+    color: azure;
+}
+.SearchName{
+    font-size: 15px;
+    line-height: 8px;
+    letter-spacing: 0.109em;
+    font-weight: 200;
+}
